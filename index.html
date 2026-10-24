@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Task Manager</h1>
+        <p>Stay organized. Study smarter.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>My Profile</h2>
+
+            <form id="profileForm">
+                <label for="username">Your name</label>
+                <input type="text" id="username" placeholder="Enter your name" required>
+
+                <label for="birthYear">Birth year</label>
+                <input type="number" id="birthYear" placeholder="e.g. 2007"
+                       min="1900" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+
+            <div class="profile-info">
+                <p>Name: <span id="profileName">Student</span></p>
+                <p>Age: <span id="profileAge">Not set</span></p>
+                <p>Total tasks: <span id="profileTaskCount">4</span></p>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="card">
+            <h2>My Tasks</h2>
+
+            <div class="task-summary">
+                <p>All tasks: <span id="totalTasks">4</span></p>
+                <p>Completed: <span id="completedTasks">0</span></p>
+            </div>
+
+            <form id="taskForm">
+                <label for="taskInput">New task</label>
+                <input type="text" id="taskInput"
+                       placeholder="Enter a task..." required>
+
+                <label for="taskDate">Deadline</label>
+                <input type="date" id="taskDate">
+
+                <button type="submit">+ Add Task</button>
+            </form>
+
+            <ul id="taskList"></ul>
+
+            <button type="button" id="removeButton" class="remove-btn">
+                Remove Last Task
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with care ♡ Study well, do your best!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
